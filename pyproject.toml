@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "paypal-civi-2"
+version = "0.1.0"
+description = "Django Project"
+authors = ["grischan <grischan@gmail.com>"]
+readme = "README.md"
+packages = [{include = "paypal_civi_2"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^5.0.4"
+whitenoise = "^6.6.0"
+django-cors-headers = "^4.3.1"
+django-environ = "^0.11.2"
+dj-paypal = "^0.16.0"
+psycopg2 = "^2.9.9"
+gunicorn = "^22.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
