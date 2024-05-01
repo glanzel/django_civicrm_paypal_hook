@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "paypal-civi-2"
+name = "paypal-civi"
 version = "0.1.0"
 description = "Django Project"
 authors = ["grischan <grischan@gmail.com>"]
-readme = "README.md"
-packages = [{include = "paypal_civi_2"}]
+readme = "readme.md"
+packages = [{include = "paypal_civi"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"

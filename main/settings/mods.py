@@ -18,6 +18,8 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # False if not in os.environ because of casting above
 DEBUG = env('DEBUG')
 
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
+
 # Raises Django's ImproperlyConfigured
 # exception if SECRET_KEY not in os.environ
 SECRET_KEY = env('SECRET_KEY')
@@ -34,8 +36,6 @@ DATABASES = {
 }
 
 # paypal stuff
-PAYPAL_CLIENT_ID =  env('PAYPAL_CLIENT_ID')  #'AR5llBzLm0E7y9fGHaAoDHDg3zxq7-P-rp26RuoH8wQ7xPDOVtnL3KgPY1l3hgGzFXRRm_EXTyYnrkgS'
-PAYPAL_CLIENT_SECRET = env('PAYPAL_CLIENT_SECRET') #'EJao2u8BaU6UZhmKhq14tEGlbEqAMrXKKDP8k4Dva4X1hnEtvZAcipTdCIa6nS3D9tEDtC02o7o2umkz'
+PAYPAL_CLIENT_ID =  env('PAYPAL_CLIENT_ID')
+PAYPAL_CLIENT_SECRET = env('PAYPAL_CLIENT_SECRET')
 PAYPAL_MODE = env('PAYPAL_MODE') #"sandbox" (or "live") 
-
-
