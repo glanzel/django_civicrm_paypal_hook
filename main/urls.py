@@ -19,13 +19,14 @@ from .hello import urls as hello_urls
 
 #from .hello import views as hello_views
 from djpaypal import views as paypal_views
+import views
 
  
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("hello/", include(hello_urls)),
-    path("pph_78osudlf/", paypal_views.ProcessWebhookView.as_view())
+    path("pph_78osudlf/", views.CivipalProcessWebhookView.as_view())
 ]
 
 
