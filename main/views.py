@@ -39,6 +39,7 @@ class CivipalProcessWebhookView(View):
 
 		return HttpResponse(str(trigger.id))
 
-	def createCiviContribution(trigger:WebhookEventTrigger):
+	# TODO: should not life in Views
+	def createCiviContribution(self, trigger:WebhookEventTrigger):
 		print("start createCiviContribution")
 		trigger.process(True)
