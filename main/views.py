@@ -29,13 +29,14 @@ class CivipalProcessWebhookView(View):
 		#TODO: Abfrage dafür welcher Trigger das sein soll hinzufügen 
 		self.createCiviContribution(trigger);
 
-		if trigger.exception:
-			# An exception happened, return 500
-			return HttpResponseServerError()
+		
+  		#if trigger.exception:
+		#	# An exception happened, return 500
+		#	return HttpResponseServerError()
 
-		if not trigger.valid:
+		#if not trigger.valid:
 			# Webhook Event did not validate, return 400
-			return HttpResponseBadRequest()
+		#	return HttpResponseBadRequest()
 
 		return HttpResponse(str(trigger.id))
 
